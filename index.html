@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+    </style>
+    <!-- 
+      This is an HTML 
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <!--
+      This is the page head - it contains info the browser uses
+      Like the title, which appears on the browser tab but not inside the page
+      Further down you'll see the content that displays in the page
+    -->
+    <title>Asteroid Attack</title>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  
+  <body>
+    <!--
+      The body includes the content you see in the page
+      Each element is defined using tags, like this <div></div>
+      The attributes like class="wrapper" let us style elements in the CSS
+    -->
+     <div class="navbar">
+        <ul>
+            <li><a href="#diameter">size</a></li>
+            <li><a href="#velocity">velocity</a></li>
+            <li><a href="#brightness">brightness</a></li>
+            <li><a href="#incoming">incoming</a></li>
+            <li><a href="#time-start">timings</a></li>
+        </ul>
+    </div>
+        <div class="video-container">
+        <video autoplay loop muted>
+            <source src="https://cdn.glitch.me/896b740d-b6bc-4ffa-918d-70d37e69b2a9/space-video-new.mp4?v=1697075804673" type="video/mp4">
+            <!-- Provide alternative video formats (WebM, Ogg) for wider browser compatibility -->
+        </video>
+        <div class="content">
+            <h1>Dinosaurs couldn't track asteroids<br> but you can! </h1>
+            <h2>Scroll down to not end up like a dinosaur!</h2>
+        </div>
+    </div>
+    <div id="intro">
+       <p>
+          The following asteroid data is fetched from the NASA API for today<p id="todayData">
+      
+      </p>
+      
+      </p>
+      
+    </div>
+    <div id="diameter">
+      <div class="abstract">
+        <h1>
+          The bigger the asteroid, the faster you should run!
+        </h1>
+        <p>
+          Earth's diameter: 7,917.5 mi
+          <br> You can notice how small the diameter of asteroids is as compared to earth.
+
+        </p>
+      </div>  
+      <div class="graph">
+        <canvas id="asteroidSize">
+          
+        </canvas>
+      </div>
+      
+        
+    </div> 
+    <div id="velocity">
+      <div class="abstract-right">
+        <h1>the Fast and the Fireous</h1>
+        <p>
+          The corresponding bar graph depicts the speeds of the asteroids.
+        </p>
+      </div>  
+      <div class="graph">
+        <canvas id="asteroidSpeed">
+          
+        </canvas>
+      </div>
+    </div>
+    <div id="brightness">
+      <div class="abstract">
+        <h1>is it a star?</h1>
+        <p>
+          The space rocks can be really bright.<br> The polar chart highlights asteroids in decreasing order of their brightness!
+        </p>
+      </div>  
+      <div class="graph">
+        <canvas id="asteroidBrightness">
+          
+        </canvas>
+      </div>
+    </div>
+      <div id="incoming">
+      <div class="abstract-right">
+        <h1>its coming for you at...</h1>
+        <p>
+          Just kidding! <br>The chart gives you a time of when the asteroid might pass us by!
+        </p>
+          
+          
+          
+        
+      </div>  
+      <div class="graph">
+        <canvas id="asteroidTime">
+          
+        </canvas>
+      </div>
+    </div>
+     <p id="time-start">
+        Timings for asteroids passing by:
+      </p>
+    <div id="timings">
+     
+          </div>
+<!--     <div class="time">
+          
+        </div> -->
+        
+        
+          <footer>
+            <p>
+              <a href="https://api.nasa.gov/">
+              The NASA API
+            </a>
+            </p>
+        <p>&copy; 2023 Hrushikesh Ingale | Find me on <a href="https://github.com/hrushingale" target="_blank">GitHub</a></p>
+    </footer>
+   
+    <!-- The footer holds our remix button — you can keep or delete it ✂ -->
+
+  </body>
+</html>
